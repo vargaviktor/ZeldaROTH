@@ -91,8 +91,8 @@ int getLanguage(void)
 
 void setLanguage(int languageID)
 {
-	if (languageID>5) language = 1;
-	else if (languageID<1) language = 5;
+	if (languageID>6) language = 1;
+	else if (languageID<1) language = 6;
 	else language = languageID;
- 
+ // modified 5 to 6 to enable the added 6. language Hungarian
 }

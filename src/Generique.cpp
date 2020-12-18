@@ -166,6 +166,15 @@ case 5: // Spanish
     gpJeu->affiche(image, "RECORDS", 215, 200);
 break;
 
+case 6: // Hungarian
+    gpJeu->affiche(image, "KIVÁLASZTÁS", 40, 16);
+    gpJeu->affiche(image, "1.", 44, 56);
+    gpJeu->affiche(image, "2.", 44, 104);
+    gpJeu->affiche(image, "3.", 44, 152);
+    gpJeu->affiche(image, "OPCIÓK", 60, 200);
+    gpJeu->affiche(image, "REKORDOK", 215, 200);
+break;	
+
 default:
     gpJeu->affiche(image, "PLAYER SELECT", 40, 16);
     gpJeu->affiche(image, "1.", 44, 56);
@@ -369,6 +378,16 @@ case 5: // Spanish
     gpJeu->affiche(image, "BORRAR", 215, 200);
 break;
 
+case 6: // Hungarian
+    gpJeu->affiche(image, "REKORDOK", 40, 16);
+    gpJeu->affiche(image, "LEGJOBB IDÕ: " + oss.str(), 140, 16);
+    gpJeu->affiche(image, "100% RANGLISTA", 44, 56);
+    gpJeu->affiche(image, "ULTIMATE RANGLISTA", 44, 104);
+    gpJeu->affiche(image, "SEBESSÉG RANGLISTA", 44, 152);
+    gpJeu->affiche(image, "VISSZA", 63, 200);
+    gpJeu->affiche(image, "TÖRLÉS", 215, 200);
+break;	
+
 default:
     gpJeu->affiche(image, "RECORDS", 40, 16);
     gpJeu->affiche(image, "BEST TIME: " + oss.str(), 140, 16);
@@ -422,6 +441,12 @@ case 5: // Spanish
     gpJeu->affiche(image, "NO", 151, 133);
 break;
 
+case 6: // Hungarian
+    gpJeu->affiche(image, "TÖRÖL ?", 133, 93);
+    gpJeu->affiche(image, "IGEN", 151, 113);
+    gpJeu->affiche(image, "NEM", 151, 133);
+break;	
+
 default:
     gpJeu->affiche(image, "ERASE ?", 133, 93);
     gpJeu->affiche(image, "YES", 151, 113);
@@ -459,6 +484,11 @@ case 5: // Spanish
     gpJeu->affiche(image, "ANULAR", 139, 133);
 break;
 
+case 6: // Hungarian
+    gpJeu->affiche(image, "BETÖLT", 139, 93);
+    gpJeu->affiche(image, "TÖRÖL", 139, 113);
+    gpJeu->affiche(image, "MÉGSEM", 139, 133);
+break;	
 default:
     gpJeu->affiche(image, "LOAD", 139, 93);
     gpJeu->affiche(image, "ERASE", 139, 113);
@@ -690,6 +720,46 @@ case 5: // Spanish
     gpJeu->affiche(image, "Grabar / Quitar : SELECT", 24, ligne); ligne+=16;
 break;
 
+case 6: // Hungarian
+    gpJeu->affiche(image, "SÚGÓ 1/2", 40, 16);
+    
+    gpJeu->affiche(image, "Vissza a játékhoz: A - Következõ: Jobbra", 24, 208);
+    
+    gpJeu->affiche(image, "Olvas / Nyit / Beszél: A", 24, ligne); ligne+=16;
+    gpJeu->affiche(image, "Megerõsít / Szövegben tovább: A", 24, ligne); ligne+=16;
+    gpJeu->affiche(image, "Link mozgatása: Nyilak", 24, ligne); ligne+=16;
+    if (gpJoueur->hasObjet(O_BOTTES)) {
+        gpJeu->affiche(image, "Futás : R nyomvatartva", 24, ligne); 
+        ligne+=16;}
+    if (gpJoueur->getEpee()) {
+        gpJeu->affiche(image, "Kard használata: B", 24, ligne); ligne+=16;
+        gpJeu->affiche(image, "Pörgõ támadás: B nyomva, majd elengedve", 24, ligne); 
+        ligne+=16;}
+    gpJeu->affiche(image, "Tárgy kiválasztás: L és START", 24, ligne); ligne+=16;
+    if (ligne >= 176) return;
+    gpJeu->affiche(image, "Kiválaszott tárgy használata: Y", 24, ligne); ligne+=16;
+    if (ligne >= 176) return;
+    if (gpJoueur->hasObjet(O_GANTS)) {
+        gpJeu->affiche(image, "Tárgyak felvétele (kesztyûvel): X", 24, ligne); 
+        ligne+=16;}
+    if (ligne >= 176) return;
+    if (gpJoueur->hasObjet(O_CARTE))
+        gpJeu->affiche(image, "Térkép megnyitása: START (börtönön kívül)", 24, ligne);
+    else gpJeu->affiche(image, "Térkép megnyitása: START (börtönben)", 24, ligne);
+    ligne+=16;
+    if (ligne >= 176) return;
+    if (gpJoueur->hasObjet(O_ENCYCL)) {
+        gpJeu->affiche(image, "Megölt szörny megtekintése: L és B", 24, ligne); 
+        ligne+=16;}
+    if (ligne >= 176) return;
+    gpJeu->affiche(image, "Körbenézés: L és irány", 24, ligne); ligne+=16;
+    if (ligne >= 176) return;
+    gpJeu->affiche(image, "Nagyít / Kicsinyít: L és A", 24, ligne); ligne+=16;
+    if (ligne >= 176) return;
+    gpJeu->affiche(image, "Mentés / Kilépés: SELECT", 24, ligne); ligne+=16;
+
+break;	
+
 default:
     gpJeu->affiche(image, "HELP 1/2", 40, 16);
     
@@ -901,6 +971,37 @@ case 5: // Spanish
     gpJeu->affiche(image, "Grabar / Quitar : SELECT", 24, ligne); ligne+=16;
 break;
 
+case 6: // Hungarian
+ gpJeu->affiche(image, "SÚGÓ 2/2", 40, 16);
+    
+    gpJeu->affiche(image, "Vissza a játékhoz: A - Elõzõ: Bal", 24, 208);
+    
+    ligne+=64;
+    if (gpJoueur->hasObjet(O_BOTTES)) ligne+=16;
+    if (gpJoueur->getEpee()) ligne+=32;
+    if (ligne >= 64) 
+    gpJeu->affiche(image, "Kiválaszott tárgy használata: Y", 24, ligne); ligne+=16;
+    if (ligne >= 64) 
+    if (gpJoueur->hasObjet(O_GANTS)) {
+        gpJeu->affiche(image, "Tárgyak felvétele (kesztyûvel): X", 24, ligne); 
+        ligne+=16;}
+    if (ligne >= 64) {
+    if (gpJoueur->hasObjet(O_CARTE))
+        gpJeu->affiche(image, "Térkép megnyitása: START (börtönön kívül)", 24, ligne);
+    else gpJeu->affiche(image, "Térkép megnyitása: START (börtönben)", 24, ligne);}
+    ligne+=16;
+    if (ligne >= 64) 
+    if (gpJoueur->hasObjet(O_ENCYCL)) {
+        gpJeu->affiche(image, "Megölt szörny megtekintése: L és B", 24, ligne); 
+        ligne+=16;}
+    if (ligne >= 64) 
+    gpJeu->affiche(image, "Körbenézés: L és irány", 24, ligne); ligne+=16;
+    if (ligne >= 64) 
+    gpJeu->affiche(image, "Nagyít / Kicsinyít: L és A", 24, ligne); ligne+=16;
+    if (ligne >= 64) 
+    gpJeu->affiche(image, "Mentés / Kilépés: SELECT", 24, ligne); ligne+=16;
+break;	
+
 default:
     gpJeu->affiche(image, "HELP 2/2", 40, 16);
     
@@ -1070,6 +1171,39 @@ case 5: // Spanish
     }
 break;
 
+case 6: // Hungarian
+switch (i) {
+        case 0 :
+            cadre(88-2-16,96,144+4+32,48);
+            if (gpJeu->getKeyboard()->getRang(i)) 
+                gpJeu->affiche(image, "RANG: Hyrule hõse", 96-2-16, 104);
+            else gpJeu->affiche(image, "RANG: ISMERETLEN", 96-2-16, 104);
+            gpJeu->affiche(image, "A játék 100%-os befejezése", 96-2-16, 120);
+            break;
+        case 1 :
+            cadre(64-8-16,64,192+16+32,112);
+            int l; l=72;
+            if (gpJeu->getKeyboard()->getRang(i)) 
+                gpJeu->affiche(image, "RANG: Hencegõ", 72-8-16, l);
+            else gpJeu->affiche(image, "RANG: ISMERETLEN", 72-8-16, l);
+            l+=16;
+            gpJeu->affiche(image, "A játék befejezése halál nélkül,", 72-8-16, l);l+=16;
+            gpJeu->affiche(image, "legfeljebb 10 szívvel, anélkül, ", 72-8-16, l);l+=16;
+            gpJeu->affiche(image, "hogy beszélne a Nagy Tündérekkel,", 72-8-16, l);l+=16;
+			gpJeu->affiche(image, "üvegek vásárlása nélkül", 72-8-16, l);l+=16;
+            gpJeu->affiche(image, "és pajzs nélkül.", 72-8-16, l);l+=16;
+            break;
+        case 2 :
+            cadre(71-10,88,178+20,64);
+            if (gpJeu->getKeyboard()->getRang(i)) 
+                gpJeu->affiche(image, "RANG: Hyrule Marathon futó", 78-10, 96);
+            else gpJeu->affiche(image, "RANG: ISMERETLEN", 78-10, 96);
+            gpJeu->affiche(image, "A játék befejezése kevesebb, ", 78-10, 112);
+            gpJeu->affiche(image, "mint 2 óra alatt", 78-10, 128);
+            break;
+    }
+break;
+	
 default:
     switch (i) {
         case 0 :
@@ -1187,6 +1321,10 @@ case 5: // Spanish
     gpJeu->affiche(image, "RESULTADOS :", 136, 10);
 break;
 
+case 6: // Hungarian
+    gpJeu->affiche(image, "EREDMÉNYEK:", 136, 10);
+break;
+
 default:
     gpJeu->affiche(image, "RESULTS:", 136, 10);
 break;	
@@ -1219,6 +1357,10 @@ case 5: // Spanish
     gpJeu->affiche(image, ("Tiempo jugando : " + oss.str()).c_str(), 10, 30);
 break;
 
+case 6: // Hungarian
+    gpJeu->affiche(image, ("Játék idõ: " + oss.str()).c_str(), 10, 30);
+break;
+
 default:
     gpJeu->affiche(image, ("Game time: " + oss.str()).c_str(), 10, 30);
 break;	
@@ -1247,6 +1389,10 @@ case 5: // Spanish
     gpJeu->affiche(image, ("Muerto " + oss.str() + " veces").c_str(), 10, 50);
 break;
 
+case 6: // Hungarian
+    gpJeu->affiche(image, ("Meghalt " + oss.str() + " alkalommal").c_str(), 10, 50);
+break;
+
 default:
     if (tmp==1) gpJeu->affiche(image, ("Dead " + oss.str() + " time").c_str(), 10, 50);
     else gpJeu->affiche(image, ("Dead " + oss.str() + " times").c_str(), 10, 50);
@@ -1272,6 +1418,10 @@ break;
 
 case 5: // Spanish
     gpJeu->affiche(image, ("Cuarto de corazón : " + oss.str() + " / 36").c_str(), 10, 70);
+break;
+
+case 6: // Hungarian
+    gpJeu->affiche(image, ("Szívdarab: " + oss.str() + " / 36").c_str(), 10, 70);
 break;
 
 default:
@@ -1470,6 +1620,54 @@ case 5: // Spanish
         gpJeu->affiche(image, " - "+result, 52, ligne); ligne+=20;}
 break;
 
+case 6: // Hungarian
+	gpJeu->affiche(image, ("Tárgyak: " + oss.str() + " / 56").c_str(), 10, 90);
+    
+    tmp=gpJoueur->nbEnnemis();
+    oss.str(""); oss << tmp; pctg+=tmp;
+    gpJeu->affiche(image, ("Megölt ellenségek fajtái: " + oss.str() + " / 46").c_str(), 10, 110);
+    
+    pctg=(int)((pctg*100)/138);
+    oss.str(""); oss << pctg;
+    gpJeu->affiche(image, ("A feladatok " + oss.str() + "%-át végezted el, gratulálunk!").c_str(), 
+        10, 130);
+    
+    gpJeu->affiche(image, "RANG: ", 10, ligne);
+    
+    if (gpJoueur->getMort()==0 && gpJoueur->hasBouteille(0)==0
+        && gpJoueur->hasBouteille(1)==0 && gpJoueur->hasBouteille(2)==0
+        && gpJoueur->hasMedaillon(0)==0 && gpJoueur->hasMedaillon(1)==0
+        && gpJoueur->hasMedaillon(2)==0 && gpJoueur->getVieMax()==20
+        && gpJoueur->getMagieMax()==32 && gpJoueur->getBouclier()==0) {
+        result="Hencegõ"; gpJeu->affiche(image, " - "+result, 52, ligne); ligne+=20;
+        gpJeu->getKeyboard()->setRang(1); gpJeu->getKeyboard()->saveP();}
+    else {
+        if (pctg==100) {result="Hyrule hõse"; 
+            gpJeu->getKeyboard()->setRang(0); gpJeu->getKeyboard()->saveP();}
+        if (pctg<100) result="Perfekcionista";
+        if (pctg<95) result="Zelda Fan";
+        if (pctg<90) result="Profi";
+        if (pctg<85) result="Tapasztalt";
+        if (pctg<80) result="Újonc";
+        gpJeu->affiche(image, " - "+result, 52, ligne);
+        ligne+=20;
+    }
+    
+    if (gpJoueur->getMort()>=50) {
+        result="Élõhalott"; gpJeu->affiche(image, " - "+result, 52, ligne); ligne+=20;}
+    else if (gpJoueur->getMort()>=20) {
+        result="Kamikáze"; gpJeu->affiche(image, " - "+result, 52, ligne); ligne+=20;}
+        
+    if (temps<=7200) {
+        result="Hyrule Marathon futó"; 
+        gpJeu->getKeyboard()->setRang(2); gpJeu->getKeyboard()->saveP();
+        gpJeu->affiche(image, " - "+result, 52, ligne); ligne+=20;}
+
+break;	
+
+
+
+
 default:
     gpJeu->affiche(image, ("Objects: " + oss.str() + " / 56").c_str(), 10, 90);
     
@@ -1581,6 +1779,15 @@ case 5: // Spanish
     gpJeu->affiche(gpScreen, "Espanol", 170, 158);
     gpJeu->affiche(gpScreen, "ANTERIOR", 63-6, 200);
 break;
+
+case 6: // Hungarian
+    gpJeu->affiche(gpScreen, "OPCIÓK", 40, 16);
+    gpJeu->affiche(gpScreen, "ZENE", 60, 72);
+    gpJeu->affiche(gpScreen, "HANGOK", 60, 115);
+    gpJeu->affiche(gpScreen, "NYELV", 60, 158);
+    gpJeu->affiche(gpScreen, "Magyar", 170, 158);
+    gpJeu->affiche(gpScreen, "VISSZA", 63, 200);
+break;	
 
 default:
     gpJeu->affiche(gpScreen, "OPTIONS", 40, 16);

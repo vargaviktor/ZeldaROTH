@@ -423,6 +423,10 @@ case 5: // Spanish
     gpJeu->affiche(gpScreen, "ESTATUTO:", 148,20-dec);
 break;
 
+case 6: // Hungarian
+    gpJeu->affiche(gpScreen, "ÁLLAPOT:", 148,20-dec);
+break;
+
 default:
     gpJeu->affiche(gpScreen, "STATUS:", 148,20-dec);
 break;	
@@ -449,6 +453,10 @@ break;
 case 5: // Spanish
     gpJeu->affiche(gpScreen, "VIDA      : " + oss.str(), 148,36-dec+8);
 break;
+
+case 6: // Hungarian
+    gpJeu->affiche(gpScreen, "ÉLET      : " + oss.str(), 148,36-dec+8);
+break;	
 
 default:
     gpJeu->affiche(gpScreen, "LIFE      : " + oss.str(), 148,36-dec+8);
@@ -481,6 +489,10 @@ case 5: // Spanish
         gpJeu->affiche(gpScreen, "MAGIA     : " + oss.str(), 148,i-dec);
 break;
 
+case 6: // Hungarian
+        gpJeu->affiche(gpScreen, "MÁGIA     : " + oss.str(), 148,i-dec);
+break;	
+
 default:
         gpJeu->affiche(gpScreen, "MAGIC     : " + oss.str(), 148,i-dec);
 break;	
@@ -509,6 +521,10 @@ case 5: // Spanish
     gpJeu->affiche(gpScreen, "STRENGTH  : " + oss.str(), 148,i-dec);
 break;
 
+case 6: // Hungarian
+    gpJeu->affiche(gpScreen, "ERÕ       : " + oss.str(), 148,i-dec);
+break;
+
 default:
     gpJeu->affiche(gpScreen, "STRENGTH  : " + oss.str(), 148,i-dec);
 break;	
@@ -534,6 +550,10 @@ break;
 case 5: // Spanish
     gpJeu->affiche(gpScreen, "DEFENSA   : " + oss.str(), 148,i-dec);
 break;
+
+case 6: // Hungarian
+    gpJeu->affiche(gpScreen, "VÉDELEM   : " + oss.str(), 148,i-dec);
+break;	
 
 default:
     gpJeu->affiche(gpScreen, "DEFENSE   : " + oss.str(), 148,i-dec);
@@ -565,6 +585,10 @@ break;
 case 5: // Spanish
     gpJeu->affiche(gpScreen, "TIEMPO    : " + oss.str(), 148,i-dec);
 break;
+
+case 6: // Hungarian
+    gpJeu->affiche(gpScreen, "IDÕ       : " + oss.str(), 148,i-dec);
+break;	
 
 default:
     gpJeu->affiche(gpScreen, "TIME      : " + oss.str(), 148,i-dec);
@@ -637,6 +661,10 @@ break;
 case 5: // Spanish
     gpJeu->affiche(gpScreen, "CRISTALES:", 20,180+dec);
 break;
+
+case 6: // Hungarian
+    gpJeu->affiche(gpScreen, "KRISTÁLY:", 20,180+dec);
+break;	
 
 default:
     gpJeu->affiche(gpScreen, "CRYSTALS:", 20,180+dec);

@@ -1259,6 +1259,318 @@ case 5: // Spanish
 
 break; // Spanish
 
+case 6: // Hungarian
+// //HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHhh //UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUuuuu
+
+switch (id) {
+        case 1  : texte = "Találtál egy pajzsot!**A védelmed növekszik 1 ponttal!"; break;
+        case 2  : texte = "Találtál egy kardot!**Most már harcolhatsz szörnyekkel a B gombbal.*Tartsd nyomva a B gombot, hogy feltöltsd a forgó támadást!"; break;
+        case 3  : 
+            tmp = 4-(gpJeu->getJoueur()->nbQuarts()%4);
+            os << tmp;
+            texte = "Találtál egy szívdarabot!!!";
+            if (tmp<4) buffer = "Még "+os.str()+" darabra van szükséged egy új szívtárolóhoz.";
+            else buffer = "A szív szinted növekedett!";
+            break;
+        case 11 : texte = "É: Link otthona*W: Hyrule fennsík*K: Erdõ temploma"; break;
+        case 12 : texte = "Hegyi templom**Nem a szívbajosak, ijedõsek és a gyenge szívûek számára."; break; 
+        case 13 : texte = "NY: Sivatag bejárat*É: Hegyi templom"; break;
+        case 14 : texte = "É: Hegyi templom*D: Hyrule fennsík"; break;
+        case 15 : texte = "É: Halál hegység"; break;
+        case 16 : texte = "K: Erdõ bejárat"; break;
+        case 17 : texte = "D: Hylia tó*K: Kísértetjárta temetõ"; break;
+        case 18 : texte = "D: Kakariko falu felé"; break;
+        case 19 : texte = "É: Kakariko falu"; break;
+        case 20 : texte = "É: Hyrule fennsík"; break;
+        case 21 : texte = "NY: Tûz föld"; break;
+        case 22 : texte = "K: Árny falu*- Nem az élõknek -"; break;
+        case 23 : texte = "Sötét templom**Ha szellem vagy és munkát keresel, gyere ide és lógj velünk."; break;
+        case 24 : texte = "É: Árny falu*NY: Hylia tó"; break;
+        case 25 : texte = "É: Kísértetjárta temetõ**Nincs belépés"; break;
+        case 26 : texte = "Árny falu"; break;
+        case 27 : texte = "100 rúpiáért adok egy palackot, érdekel?*             IGEN ?            nem  "; 
+            if ((gpJeu->getJoueur()->hasBouteille(0) && gpJeu->getZone()==8)
+            || (gpJeu->getJoueur()->hasBouteille(1) && gpJeu->getZone()==5)
+            || (gpJeu->getJoueur()->hasBouteille(2) && gpJeu->getZone()==6)) {id=32; chercheText();break;}
+            if (gpJeu->getJoueur()->getRubis() + gpJeu->getJoueur()->getBoostRubis()<100) idsuiv=29;
+            else idsuiv=30;
+            break;
+        case 28 : texte = "100 rúpiáért adok egy palackot, érdekel?*             igen              NEM ?"; idsuiv=31; break;
+        case 29 : texte = "Sajnálom, nincs elég rúpiád"; break;
+        case 30 : texte = "Köszönöm, itt a palackod."; break;
+        case 31 : texte = "Gyere máskor, ha meggondoltad magad."; break;
+        case 32 : texte = "Sajnálom, ez volt az egyetlen üvegem."; break;
+        case 33 : texte = "Találtál egy üres üveget!**Jó lehet italok tárolására."; break;
+        case 35 : texte = "A falu lakóinak a szokásostól eltérõ a nyelvjárása. Nem értek semmit ..."; break;
+        case 36 : texte = "@+@+@+@+@+@+@@@+*@=++=@=+@=+@=+=@*+@+@+@+=+="; break;
+        case 37 : texte = "Wangle fõnök engedélye kell, ha tényleg át szeretne haladni!"; break; 
+        case 38 : texte = "A fõnök engedélyezte az átaladást? Grrrr... Akkor haladj tovább!"; break;
+        case 39 : texte = "Menj az utamból!"; break;
+        case 40 : texte = "Nem túl sûrûn jönnek látogatók errefelé."; break;
+        case 41 : texte = "A helyi szörnyek nem sok mindetõl félnek. Szerencsére csak embereket támadnak meg."; break;
+        case 42 : texte = "Valóban?*Megérted amit mondok?"; break;
+        case 43 : texte = "É: Sivatag és Gerudo falu"; break; 
+        case 44 : texte = "D: Hylia tó*NY: Hyrule kastély"; break;
+        case 45 : texte = "Kakariko falu"; break;
+        case 46 : texte = "NY: Hyrule kastély"; break;
+        case 47 : texte = "Milyen szép nap!"; break;
+        case 48 : texte = "Miért vállaltam el, hogy gondoskodom arról a szemétrõl?* Utálom a tyúkokat!"; break;
+        case 49 : texte = "Sok mindent találhatsz ennek a falunak a boltjában."; break;
+        case 50 : texte = "D: Kakariko falu*NY: Sivatag*K: Halál hegység"; break;
+        case 51 : texte = "Gerudo falu"; break;
+        case 52 : texte = "Eltévedtél a sivatagban?*Itt vagy:*                        X"; break;
+        case 54 : texte = "D: Hyrule kastély felé"; break;
+        case 55 : texte = "Sivatag templom**Jöjjön próbálja ki fürdõinket.*(A víz nem iható)"; break;
+        case 56 : texte = "Erdõ templom**Védd a fákat, egyél hódot!"; break;
+        case 57 : texte = "Tó templom**Fürdõ sapka kötelezõ."; break;
+        case 58 : texte = "Jég templom**A stáb arra emlékeztet, hogy a börtön nem jégpálya."; break;
+        case 59 : texte = "Találkoztál már a falu kovácsával?*Állítólag nagyon jó kalandozók felszerelésének feljavításában. Sokan látogatják meg."; break;
+        case 60 : texte = "A templom a sivatag mélyén található, egy õsi oázisban."; break;
+        case 61 : texte = "D: Tûz föld*K: Kakariko falu"; break;
+        case 62 : texte = "Hyrule kastély"; break;
+        case 63 : texte = "K: Kakariko falu"; break;
+        case 64 : texte = "NY: Teknõs szikla*K: Hylia tó"; break;
+        case 65 : texte = "Rejtett templom**Itt pihen a Gonosz Bane kardja, a Mesterkard."; break;
+        case 66 : texte = "É: Kísértetjárta temetõ felé"; break;
+        case 67 : texte = "Megtaláltad a Börtön térképet!*Nyomj START gombot a térkép megtekintéséhez."; break;
+        case 68 : texte = "Megtaláltad az Iránytût!*Megtalálhatod vele a fõnököt és a ládákat a terepen."; break;  
+        case 69 : texte = "Megtaláltad a Fõnök kulcsot!"; break;
+        case 70 : texte = "Megtaláltad a kis kulcsot!*Sétálj egy ajtóhoz, hogy kinyitsd."; break;
+        case 71 : texte = "Megtaláltad a Kesztyût!*Használd tárgyak emeléséhez az X gombbal."; break;
+        case 72 : 
+            texte = "Találtál egy Varázskristályt!"; 
+            tmp = 7-gpJeu->getJoueur()->nbCristaux();
+            os << tmp;
+            if (tmp==6 && !gpJeu->getJoueur()->getAvancement()) buffer = "Vajon mire használható...?";
+            else if (tmp>2) buffer = "Még "+os.str()+" darabot kell megtalálni!";
+            else if (tmp==2) buffer = "Már csak kettõt kell megtalálni!";
+            else if (tmp==1) buffer = "Csak egy hiányzik!";
+            else if (tmp==0) buffer = "Megvan az összes kristály, rohanj a várhoz és mentsd meg Zeldát!";
+            break;
+        case 80 : texte = "Megtaláltad a Kampóvetõt!*Használd az akadályokon átjutáshoz."; break;
+        case 81 : texte = "Megtaláltad a Lámpást!*Használd a dolgok felgyújtására."; break;
+        case 82 : texte = "Megtaláltad az Uszonyt!*Válaszd ki a tárgy menüben hogy ússz a vízben."; break;
+        case 83 : texte = "Megtaláltad a Mágikus Kalapácsot!*Használd az akadályok szétverésére."; break;
+        case 84 : texte = "Megtaláltad a Tûz Pálcáját!*Mostantól képes vagy erõteljes lángokat kilõni."; break;
+        case 85 : texte = "Megtaláltad a Jég Pálcáját!**Használd a távolról fagyasztáshoz."; break;
+        case 86 : texte = "Megtaláltad a Mesterkardot!*Még Ganon sem tud ellenállni az erejének... elméletben!"; break;
+        case 87 : texte = "Köszönöm, hogy megmentettél, Link.***Találjuk meg Ganont gyorsan; vissza kell szereznünk a Hatalomhármasságot!"; break;
+        case 89 : texte = "A trónterem hátsó részén lévõ titkos járat Ganonhoz vezet. Siess!"; break;
+        case 90 : texte = "Nagyon közel vagyunk, kövess!"; break;
+        case 91 : texte = "Attól tartok, hogy a jelenlegi fegyvereiddel nem tudod elpusztítani Ganont...*Menj és beszélj Kakariko falu fõnökével, biztos vagyok benne, hogy kitalál egy megoldást."; break;
+        case 92 : texte = "Ganon épp az ajtó mögött van. Meggyógyítom a sebeidet."; break;
+        case 93 : texte = "Ganon még itt van valahol a kastélyban."; break;
+        case 94 : texte = "Várnod kell Zelda hercegnõre!"; break;
+        case 95 : texte = "Nincs az az érzésed, hogy valakit esetleg véletlenül elfelejtettél?"; break;
+        case 96 : texte = "Zelda vár rád!"; break;
+        case 97 : texte = "Megtaláltad a Hatalomhármasságot!"; break;
+        case 98 : texte = "Megtaláltad Mudora Könyvét!**Mostantól érteni fogod az õsi Hylian nyelvet!"; break;
+        case 99 : texte = "Gratulálok, hogy megtaláltál, Link. Jutalmul neked adom Din medálját. Megnöveli a védelmedet 1 ponttal."; break;
+        case 100 : texte = "Gratulálok, hogy megtaláltál, Link. Jutalmul neked adom Nayru medálját. Megnöveli a védelmedet 2 ponttal."; break;
+        case 101 : texte = "..."; break;
+        case 102 : texte = "Szereztél egy mágikus medált!**A védelmed növekedett!"; break;
+        case 103 : texte = "Gratulálok, hogy megtaláltál, Link. Jutalmul megduplázom a kapacitását a mágia mérõdnek!"; break;
+        case 104 : texte = "A mágia mérõd megduplázódott!"; break;
+        case 105 : texte = "Gyere vissza, ha van egy üres üveged, és akkor eladok neked egy vörös italt, ami helyreállítja az életerõd."; break;
+        case 106 : texte = "Egy vörös ital 60 rúpiáért. Érdekel?*             IGEN ?            nem  "; 
+            if (gpJeu->getJoueur()->hasBouteille(0)!=1
+            && gpJeu->getJoueur()->hasBouteille(1)!=1
+            && gpJeu->getJoueur()->hasBouteille(2)!=1) {id=105; chercheText();break;}
+            if (gpJeu->getJoueur()->getRubis() + gpJeu->getJoueur()->getBoostRubis()<60) idsuiv=29;
+            else idsuiv=108; break;
+        case 107 : texte = "Egy vörös ital 60 rúpiáért. Érdekel?*             igen              NEM ?"; break;
+        case 108 : texte = "Köszönöm, itt az italod.";break;
+        case 109 : texte = "Van egy vörös italod!*Idd meg az életerõd visszaállításához."; break;
+        case 110 : texte = "Van egy zöld italod!*Idd meg a mágia mérõd visszaállításához."; break;
+        case 111 : texte = "Van egy kék italod!*Idd meg az életerõd és a mágia mérõd visszaállításához."; break;
+        case 112 : texte = "Hello, mit szeretnél inni?"; break;
+        case 113 : texte = "-Hukk!- A tündérek állítólag feljavított tárgyakat adnak... -Hukk!- ...a kalandozóknak akik megtalálják õket... -Hukk!!!-"; break;
+		case 114 : texte = "Egy szív 10 rúpiáért. Érdekel?**             IGEN ?            nem  "; 
+            if (gpJeu->getJoueur()->getVie()+gpJeu->getJoueur()->getBoostVie()
+            == gpJeu->getJoueur()->getVieMax()) {id=128; chercheText();break;}
+            if (gpJeu->getJoueur()->getRubis() + gpJeu->getJoueur()->getBoostRubis()<10) idsuiv=29;
+            else idsuiv=129; break;
+        case 115 : texte = "Egy szív 10 rúpiáért. Érdekel?**             igen              NEM ?"; break;
+        case 116 : texte = "Egy kevéske mágia 20 rúpiáért. Érdekel?**             IGEN ?            nem  "; 
+            if (gpJeu->getJoueur()->getMagie()+gpJeu->getJoueur()->getBoostMagie()
+            == gpJeu->getJoueur()->getMagieMax() || !gpJeu->getJoueur()->hasObjet(O_LANTERNE)) {
+                id=128; chercheText();break;}
+            if (gpJeu->getJoueur()->getRubis() + gpJeu->getJoueur()->getBoostRubis()<20) idsuiv=29;
+            else idsuiv=129; break;
+        case 117 : texte = "Egy kevéske mágia 20 rúpiáért. Érdekel?**             igen              NEM ?"; break;
+        case 118 : texte = "Egy kis mágia 30 rúpiáért. Érdekel?**             IGEN ?            nem  "; 
+            if (gpJeu->getJoueur()->getMagie()+gpJeu->getJoueur()->getBoostMagie()
+            == gpJeu->getJoueur()->getMagieMax() || !gpJeu->getJoueur()->hasObjet(O_LANTERNE)) {
+                id=128; chercheText();break;}
+            if (gpJeu->getJoueur()->getRubis() + gpJeu->getJoueur()->getBoostRubis()<30) idsuiv=29;
+            else idsuiv=129; break;
+        case 119 : texte = "Egy kis mágia 30 rúpiáért. Érdekel?**             igen              NEM ?"; break;
+        case 120 : texte = "5 nyíl 30 rúpiáért. Érdekel?**             IGEN ?            nem  "; 
+            if (gpJeu->getJoueur()->getFleche() == gpJeu->getJoueur()->getFlecheMax() 
+            || !gpJeu->getJoueur()->hasObjet(O_ARC)) {id=128; chercheText();break;}
+            if (gpJeu->getJoueur()->getRubis() + gpJeu->getJoueur()->getBoostRubis()<30) idsuiv=29;
+            else idsuiv=129; break;
+        case 121 : texte = "5 nyíl 30 rúpiáért. Érdekel?**             igen              NEM ?"; break;
+        case 122 : texte = "Egy bomba 30 rúpiáért. Érdekel?**             IGEN ?            nem  "; 
+            if (gpJeu->getJoueur()->getBombe() == gpJeu->getJoueur()->getBombeMax() 
+            || !gpJeu->getJoueur()->hasObjet(O_SAC_BOMBES)) {id=128; chercheText();break;}
+            if (gpJeu->getJoueur()->getRubis() + gpJeu->getJoueur()->getBoostRubis()<30) idsuiv=29;
+            else idsuiv=129; break;
+        case 123 : texte = "Egy bomba 30 rúpiáért. Érdekel?**             igen              NEM ?"; break;
+        case 124 : texte = "Egy íj 1000 rúpiáért. Érdekel?**             IGEN ?            nem  "; 
+            idsuiv=29; break;
+        case 125 : texte = "Egy íj 1000 rúpiáért. Érdekel?**             igen              NEM ?"; break;
+        case 126 : texte = "Egy íj 50 rúpiáért. Érdekel?**             IGEN ?            nem  "; 
+            if (gpJeu->getJoueur()->getRubis() + gpJeu->getJoueur()->getBoostRubis()<50) idsuiv=29;
+            else idsuiv=129; break;
+        case 127 : texte = "Egy íj 50 rúpiáért. Érdekel?**             igen              NEM ?"; break;
+        case 128 : texte = "Nincs szükséged épp most erre."; break;
+        case 129 : texte = "Köszönöm."; break;
+        case 130 : texte = "Megszerezted az íjat!*Használd távoli célpontokra lövésre."; break;
+        case 131 : texte = "Válassz, amit szeretnél."; break;
+        case 132 : texte = "Mi?*A fõnök küldetésén dolgozol?*Oké, akkor kedvezményt adok az íj árából"; break;
+        case 133 : texte = "Helló Link, én vagyok a fõnöke ennek a falunak. Vártuk már a jöveteled."; idsuiv=134; break;
+        case 134 : texte = "Ma reggel óta szörnyek lepik be Hyrule vidékét. Próbáltam beszélni Zeldával, de ahogy láthattad már, egy erõs varázslat elzárja az utat a kastélyba."; idsuiv=136; break;
+        case 136 : texte = "Azt mondod Ganon felelõs mindezért? Ellopta a Hatalomhármasságot és fogva tartja Zelda hercegnõt?"; idsuiv=137; break;
+        case 137 : texte = "Mmmm... A helyzet rosszabb, mint gondoltam..."; idsuiv=138; break;
+        case 138 : texte = "Gyorsan kell cselekednünk. Újra szembe kell szállnod Ganonnal!"; idsuiv=139; break;
+        case 139 : texte = "Hogyan jutunk be a kastélyba? Van egy ötletem..."; idsuiv=140; break;
+        case 140 : texte = "Mint tudod, a 7 bölcs hatalmát Aghanim 7 kristályba zárta, mikor megpróbálta megnyitni az utat a Sötét Világ felé, ahol Ganon tartózkodott."; idsuiv=141; break;
+        case 141 : texte = "Annak ellenére, hogy a 7 bölcs leszármazottait feltámasztottad, miután legyõzted Ganont és megtaláltad a Hatalomhármasságot, ezek a kristályok megtartották erejüket."; idsuiv=142; break;
+        case 142 : texte = "7 templom mélyén rejtették el õket. Gyûjtsd össze mind és meg fogod tudni törni Ganon varázslatát."; idsuiv=143; break;
+        case 143 : texte = "Ez azonban nem lesz könnyû. Ganon biztosan a legjobb csapatait küldi a kristályok védelmére."; idsuiv=144; break;
+        case 144 : texte = "Egy utolsó dolog. A jelenlegi felszereléseddel nem fogsz túl messzire jutni. Menj és találkozz a fegyverkereskedõvel, és mondd neki, hogy én küldtelek. Valószínûleg felajánl egy gesztust."; break;
+        case 145 : texte = "Menj és találkozz a fegyverkereskedõvel, és mondd neki, hogy én küldtelek. Valószínûleg felajánl egy gesztust."; break;
+        case 146 : texte = "Össze kell gyûjtened a 7 kristályt, hogy legyen esélyed megmenteni Zeldát and Hyrule-t."; break;
+        case 147 : texte = "Megtaláltad a 7 kristályt? Irány a kastély! Elõször meg kell mentened a hercegnõt. Õ aztán jobban fogja tudni nálam, hogyan mentheted meg Hyrule-t."; break;
+        case 148 : texte = "A fegyvereid semmit sem érnek Ganon ellen? Meg kell találnod a Mesterkardot. Állítólag egy elrejtett templomban rejtõzik.*A Gonosz Bane Kardjához vezetõ út átmegy egy szörnyek lakta falun...*Csodálkoznék ha ilyen falu létezne."; break;
+        case 150 : texte = "Egyébként attól tartok, a jelenlegi felszereléseddel alkalmatlan arra, hogy elérd ezt a templomot. Találkoznod kellene Gerudo falu kovácsával."; break;
+        case 151 : texte = "Itt az ideje szembe szállni Ganonnal és visszavenni a Hatalomhármasságot!"; break;
+        case 152 : texte = "Hé! Fizetned kell, hogy kinyithasd a ládaim egyikét!"; break;
+        case 153 : texte = "A ládák egyike tartalmaz egy szívdarabot. Szeretnéd megpróbálni 10 rúpiáért?*Csak egy ládát nyithatsz ki, rendben?                        IGEN ?            nem "; 
+            if (gpJeu->getJoueur()->getRubis() + gpJeu->getJoueur()->getBoostRubis()<10) idsuiv=29; break;
+        case 154 : texte = "A ládák egyike tartalmaz egy szívdarabot. Szeretnéd megpróbálni 10 rúpiáért?*Csak egy ládát nyithatsz ki, rendben?                        igen              NEM ?"; break;
+        case 155 : texte = "Válassz egy ládát."; break;
+        case 156 : texte = "Már nincs több díjam amit felajánlhatnék nyereménynek, sajnálom."; break;
+        case 157 : texte = "Vesztettél! A láda üres. Próbáld újra!"; break;
+        case 158 : texte = "Helló! Ha a kovácsot keresed, õ egy kicsit tovább elõre lakik."; break;
+        case 159 : texte = "Helló Link, én vagyok ennek a falunak a fõnöke.*Érdemes meglátogatnod a kovácsot és megmutatnod neki a felszerelést, amit fejleszteni szeretnél.";
+            buffer = "Hallottam a küldetésedrõl és elrendeztem mindent vele.*Minden ingyen lesz számodra."; break;
+        case 160 : texte = "Nincs szükséged arra, hogy ezt az italt most megidd."; break;
+        case 161 : texte = "Egy zöld ital 40 rúpiáért. Érdekel?**             IGEN ?            nem  "; 
+            if (gpJeu->getJoueur()->hasBouteille(0)!=1
+            && gpJeu->getJoueur()->hasBouteille(1)!=1
+            && gpJeu->getJoueur()->hasBouteille(2)!=1) {id=163; chercheText();break;}
+            if (gpJeu->getJoueur()->getRubis() + gpJeu->getJoueur()->getBoostRubis()<40) idsuiv=29;
+            else idsuiv=108; break;
+        case 162 : texte = "Egy zöld ital 40 rúpiáért. Érdekel?**             igen              NEM ?"; break;
+        case 163 : texte = "Gyere vissza, ha van egy üres üveged, és akkor eladok neked egy zöld italt, ami helyreállíttja a mágia mérõd."; break;
+        case 164 : texte = "Gyere vissza késõbb. Tele vagyok megrendeléssel!"; break;
+        case 165 : texte = "Tehetek érted valamit?";
+            if (gpJeu->getJoueur()->getEpee()==1) {id=166; chercheText();break;}
+            if (gpJeu->getJoueur()->hasObjet(O_GANTS)==1 && gpJeu->getJoueur()->getObjet()==8) {
+                id=169; chercheText();break;}
+            if (gpJeu->getJoueur()->hasObjet(O_ARC)==2 && gpJeu->getJoueur()->getObjet()==0 
+            && gpJeu->getJoueur()->nbCristaux()==7) {
+                id=172; chercheText();break;}
+            break;
+        case 166 : texte = "Szeretnéd, hogy megedzem a kardod?**             IGEN ?            nem  "; break;
+        case 167 : texte = "Szeretnéd, hogy megedzem a kardod??**             igen              NEM ?"; break;
+        case 168 : texte = "A kardod ereje háromszoros és most már mágikus sugarakat is lõhetsz. Annyira jó!*"; break;
+        case 169 : texte = "Szeretnéd, hogy feljavítsam a kesztyûd?**             IGEN ?            nem  "; break;
+        case 170 : texte = "Szeretnéd, hogy feljavítsam a kesztyûd?**             igen              NEM ?"; break;
+        case 171 : texte = "A kesztyûben lévõ erõ most már segít felemelni a nehéz sziklákat!"; break;
+        case 172 : texte = "Szeretnéd, hogy feljavítsam az íjad?**             IGEN ?            nem  "; break;
+        case 173 : texte = "Szeretnéd, hogy feljavítsam az íjad?**             igen              NEM ?"; break;
+        case 174 : texte = "Az íjad most már a kataklizmikus erõ ezüst nyilait lövi!"; break;
+        case 175 : texte = "Gyere vissza, ha van egy üres üveged, és akkor eladok neked egy kék italt, ami helyreállíttja az életerõd és a mágia mérõd."; break;
+        case 176 : texte = "Egy kék ital 160 rúpiáért. Érdekel?**             IGEN ?            nem  "; 
+            if (gpJeu->getJoueur()->hasBouteille(0)!=1
+            && gpJeu->getJoueur()->hasBouteille(1)!=1
+            && gpJeu->getJoueur()->hasBouteille(2)!=1) {id=175; chercheText();break;}
+            if (gpJeu->getJoueur()->getRubis() + gpJeu->getJoueur()->getBoostRubis()<160) idsuiv=29;
+            else idsuiv=108; break;
+        case 177 : texte = "Egy kék ital 160 rúpiáért. Érdekel?**             igen              NEM ?"; break;
+        case 178 : texte = "A falunk azért épült itt, hogy megakadályozza a felelõtlen kalandorok eljutását a templomba. Nem engedek akárkit át."; break;
+        case 179 : texte = "Mmmm... már találtál 4 kritstályt?*Be kell valljam, lenyûgözöl...";
+            buffer = "Rendben, átmehetsz a temetõn, de csak a saját felelõségedre."; break;
+        case 181 : texte = "Beszélj az õrrel északra a falutól. Át fog engedni."; break;
+        case 182 : texte = "Látom még életben vagy...*Meglepõ."; break;
+        case 183 : texte = "A Sötét templom a legendás tárgyhoz vezetõ út kiindulópontja. Ez a falu csak azért létezik, hogy eltántorítsa a kalandorokat a megközelítésétõl."; break;
+        case 184 : texte = "Tehát megtaláltad a Kardot?*De... ne gondold, hogy a tiéd.";
+            buffer = "A Mesterkard a Hatalomhármasság mellett Hyrule legértékesebb öröksége. Amint küldetésed befejezõdik, vissza kell hoznod a szentélyébe."; break;
+        case 186 : texte = "A falu összes lakója szellem, aki válaszolt Zelda hercegnõ hívására."; break;
+        case 187 : texte = "Amikor visszahoztad a békét Hyrule-ba, és egyesítetted a Fényvilágot az Aranyfölddel, Zelda titokban arra kérte az önkéntes szellemeket, hogy hozzák létre ezt a falut, amely elzárva tart";
+            buffer = "egy nagyon nagy értékû tárgyat."; break;
+        
+        case 189 : texte = "Üdvözöllek Link!*Engedd meg, hogy elmagyarázzam mit csinálok én itt."; idsuiv=190; break;
+        case 190 : texte = "Bizonyára észrevetted, hogy szörnyek jelentek meg Hyrule vidékén. Ez az elsõ alkalom, hogy szörnyeket látunk, mióta legyõzted Ganont."; idsuiv=191; break;
+        case 191 : texte = "Úgy döntöttem listázom mindegyiket."; idsuiv=192; break;
+        case 192 : texte = "Sajnos, túlságosan félek, hogy találkozzak velük, így a segítségedre van szükségem."; idsuiv=193; break;
+        case 193 : texte = "Minden fajta szörnnyel kell harcolnod és utána hozzám jönni jelenteni."; idsuiv=194; break;
+        case 194 : texte = "Minden alkalommal, amikor 7 új fajta ellenséget elpusztítottál, kapsz egy szívdarabot."; idsuiv=195; break;
+        case 195 : texte = "Ha szeretnéd megnézni, milyen ellenséget öltél már nyomj L és B gombokat."; break;
+        
+        
+        case 196 : 
+            if (gpJeu->getJoueur()->getCoeur(43)) {
+                if (gpJeu->getJoueur()->nbEnnemis() >= 46) {id=205; chercheText();return;}
+                else {id=204; chercheText();return;}
+            }
+            for (int i = 38; i < 44; i++) 
+                if (!gpJeu->getJoueur()->getCoeur(i) 
+                && (gpJeu->getJoueur()->nbEnnemis()/7)+37>=i) {
+                    id=203; chercheText();return;
+                }
+            tmp = 7-(gpJeu->getJoueur()->nbEnnemis()%7);
+            os << tmp;
+            if (tmp>1) texte = "Szükséged van még "+os.str()+" különbözõ ellenfélre a következõ jutalomhoz.";
+            else texte = "Már csak egy ellenségre van szükség a következõ jutalomhoz!";
+            break;
+        case 203 : texte = "Fogadd ezt az ajándékot köszönetként a projektemhez való hozzájárulásért:"; break;
+        case 204 : texte = "Sajnálom, de többé már nincs semmim számodra."; break;
+        case 205 : texte = "El sem hiszem, sikerült minden fajta ellenfelet legyõznöd!*Gratulálok, Link!"; break;
+        
+        case 206 : texte = "                    1.szint:**                   Erdõ templom"; break;
+        case 207 : texte = "                    2.szint:**                   Víz templom"; break;
+        case 208 : texte = "                    3.szint:**                  Hegyi templom"; break;
+        case 209 : texte = "                    4.szint:**                 Sivatag templom"; break;
+        case 210 : texte = "                    5.szint:**                   Sötét templom"; break;
+        case 211 : texte = "                    6.szint:**                   Tûz templom"; break;
+        case 212 : texte = "                    7.szint:**                   Jég templom"; break;
+        case 213 : texte = "                    ?.szint:**                 Rejtett templom"; break;
+        case 214 : texte = "               Utolsó szint:**                  Hyrule kastély"; break;
+        
+        case 215 :texte = "                  Már elfáradt?                  ?                 FOLYTATÁS                ?                   Ment és kilép                               Kilépés mentés nélkül          "; break;
+        case 216 :texte = "                  Már elfáradt?                                    Folytatás                    ?               MENT ÉS KILÉP              ?                Kilépés mentés nélkül          "; break;
+        case 217 :texte = "                  Már elfáradt?                                    Folytatás                                    Ment és kilép                  ?            KILÉPÉS MENTÉS NÉLKÜL         ?"; break;
+        
+        case 223 : texte = "Abban a pillanatban, amikor Link megérintette a Hatalomhármasságot, a szörnyek eltûntek, és visszatért a béke. ** Zelda hercegnõ aztán egy nagyszerû döntést hozott: megérintette a Hatalomhármasságot és megfogalmazta kívánságát. ** A Hatalomhármasság mindig is csak a Királyság bajainak forrása volt. Elõbb vagy utóbb újra megtalálná egy másik gonosz lény.** Amikor Zelda hercegnõ megérintette az ereklyét, az eltûnt Hyrule-ból ... örökre.";
+            buffer = "Ettõl a naptól kezdve Hyrule népe békében élt, nem félve az új katasztrófáktól.** Így esett meg Zelda legendája, a Hatalomhármasságról és az Aranyföldrõl.** Állítólag a Mesterkard nyugodtan pihen valahol, mint Link küldetésének utolsó mementója."; break;
+        case 224 : texte = "Gratulálok, hogy megtaláltál, Link. Jutalmul neked adom Farore medálját. Megnöveli a védelmedet 1 ponttal."; break;
+        case 225 : texte = "Szeretné menteni a játékot?**                   ? IGEN ?*                      nem  "; break;
+        case 226 : texte = "Szeretné menteni a játékot?**                     igen  *                    ? NEM ?"; break;
+        case 227 : texte = "Játék mentve."; break;
+        
+        case 228 : texte = "A Hyrule Királyságban béke honol, mióta Link, Hyrule utolsó lovagja legyõzte a gonosz Ganont, és visszaszerezte tõle a drága Hatalomhármasságot."; idsuiv = 229; break;
+        case 229 : texte = "Senki sem tudja, mi volt Link kívánsága a Hatalomhármassághoz, de a Fény és a Sötét világ egyesítése és a 7 bölcs ember leszármazottainak feltámasztása lett az eredménye."; idsuiv = 230; break;
+        case 230 : texte = "Link ezután átadta a Hatalomhármasságot és a Mesterkardot Zelda hercegnõnek, és az emberek kezdték elhinni, hogy ez a béke tartós lesz. * De az emberek tévedtek..."; idsuiv=231; break;
+        case 231 : texte = "Sajnos Link kívánságának negatív hatásai is lettek. Ganon és csatlósai feltámadtak, és támadásra készültek."; idsuiv=232; break;
+        case 232 : texte = "Link valahol a Hyrule erdõben alszik anélkül, hogy sejtené, Ganon máris támadásba lendült, amíg egy"; 
+            buffer="ismerõs hang nem szólt hozzá álmában..."; break;
+        case 233 : texte = "Segíts!*Segíts!*Én vagyok! Zelda!*Telepatikusan szólok hozzád."; idsuiv = 234; break;
+        case 234 : texte = "Rab vagyok a vár börtönében!*Szükségem van a segítségedre!*Ganon visszatért, és biztosan megtalálta már a Hatalomhármasságot..."; idsuiv=235; break;
+        case 235 : texte = "Gyere gyorsan a kastélyhoz, Link! Te vagy az egyetlen reményem..."; break;
+        case 236 : texte = "SÚGÓ: Nyomj L és Y gombott a súgó menü megtekintéséhez."; break;
+    }
+break; // Hungarian
+
+
+
+//////////HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
+
+
+
 default:	
     switch (id) {
         case 1  : texte = "You found a shield!**Your defense increases by one point!"; break;

@@ -19,7 +19,7 @@ ID 	Description
 3 	DE Supported
 4 	IT 
 5 	ES Supported
-6 	ZH
+6 	HU Hungarian add instead of ZH 
 7 	KO
 8 	NL
 9 	PT
