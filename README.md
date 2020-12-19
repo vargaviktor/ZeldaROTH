@@ -2,24 +2,22 @@
 Port of Zelda ROTH on 3ds
 
 This is a port to 3ds of a great Zelda fan game, Zelda Return of the Hylian.
+Additional new language to play: Hungarian
 
-Credits
---------
+## Credits
+
 The original game is made by Vincent Jouillat (http://www.zeldaroth.fr)
-This game uses the sf2d sftd and sfil libraries created by Xerpi
+This game uses the sf2d sftd and sfil libraries created by Xerpi.
+Hungarian translation added by vargaviktor.
 
-Installation
---------
+## Installation
 
 In the zip there is a folder with the 3dsx and amdh files inside, to be used with a homebrew launcher. All the resources are included in the executabile using romfs.
-
 The game creates a ZeldaROTH subfolder inside the 3ds folder if doesn't exist. Here will be saved your game progresses.
-
 In the zip there is also a CIA version.
 
-Commands
---------
-Read / Open / Speak: A
+## Commands
+- Read / Open / Speak: A
 - Confirm / Pass text: A
 - Move Link: Arrows
 - Run : R hold
@@ -36,8 +34,3 @@ Read / Open / Speak: A
 - Show help: L and X
 - Save / Quit: SELECT
 - Close the game: SELECT from the title screen
-
-Known Bugs
---------
-
-- none
