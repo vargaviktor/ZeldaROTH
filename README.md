@@ -84,9 +84,15 @@ In the zip there is also a CIA version.
   make
   ```
 ## Testing
+### On Nintendo 3DS
 1. Start the Homebrew launcher on 3DS
-2. Send the file to the 3DS with 3dslink
+2. Send the .3dsx file to the 3DS with 3dslink
 
   ```sh
   3dslink -a <3dsIpAddress> ZeldaROTH.3dsx
   ```
+### In Citra
+1. Setup the Citra Nightly (https://citra-emu.org/download/)
+2. Open Citra, Select Open file and open the .3dsx file
+
+
