@@ -35,7 +35,7 @@ In the zip there is also a CIA version.
 - Save / Quit: SELECT
 - Close the game: SELECT from the title screen
 
-Build:
+## Build
 1. Install [DevKitPro](https://devkitpro.org/wiki/Getting_Started)
 2. Run your shell (ie. `MSYS2 64bit > MSYS2 MinGW 64 bit`), then change into your development/working directory, ie.:
 
@@ -57,7 +57,7 @@ Build:
   cd ../..
   ```
 
-8. Build and install latest `sfillib`:
+5. Build and install latest `sfillib`:
 
   ```sh
   git clone https://github.com/xerpi/sfillib
@@ -67,7 +67,7 @@ Build:
   cd ../..
   ```
 
-9. Build and install latest `sftdlib`:
+6. Build and install latest `sftdlib`:
 
   ```sh
   git clone https://github.com/xerpi/sftdlib
@@ -77,7 +77,7 @@ Build:
   cd ../..
   ```
 
-10. Build ZeldaROTH`:
+7. Build ZeldaROTH`:
   ```sh
   git clone https://github.com/vargaviktor/ZeldaROTH
   cd ZeldaROTH
