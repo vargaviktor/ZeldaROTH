@@ -82,4 +82,11 @@ In the zip there is also a CIA version.
   git clone https://github.com/vargaviktor/ZeldaROTH
   cd ZeldaROTH
   make
-  
+  ```
+## Testing
+1. Start the Homebrew launcher on 3DS
+2. Send the file to the 3DS with 3dslink
+
+  ```sh
+  3dslink -a <3dsIpAddress> ZeldaROTH.3dsx
+  ```
