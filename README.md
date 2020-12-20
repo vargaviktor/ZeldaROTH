@@ -83,16 +83,20 @@ In the zip there is also a CIA version.
   cd ZeldaROTH
   make
   ```
+  
 ## Testing
 ### On Nintendo 3DS
 1. Start the Homebrew launcher on 3DS
 2. Send the .3dsx file to the 3DS with 3dslink
 
+## Creating CIA
+1. Download and install [makerom](https://github.com/3DSGuy/Project_CTR/releases)
+2. Strip the ELF (make a beckup copy before, it will modify it).
   ```sh
-  3dslink -a <3dsIpAddress> ZeldaROTH.3dsx
+  strip <builded.elf>
   ```
-### In Citra
-1. Setup the Citra Nightly (https://citra-emu.org/download/)
-2. Open Citra, Select Open file and open the .3dsx file
-
-
+3. Run makerom
+  ```sh
+  makerom -f cia -o <target.cia> -rsf ./resources/<resourcefile.rsd> -target t -exefslogo -elf <stripped.elf> -icon <builded.smdh> -banner ./resources/banner.bin
+  ```
+ 
