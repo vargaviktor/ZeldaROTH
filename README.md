@@ -34,3 +34,52 @@ In the zip there is also a CIA version.
 - Show help: L and X
 - Save / Quit: SELECT
 - Close the game: SELECT from the title screen
+
+Build:
+1. Install [DevKitPro](https://devkitpro.org/wiki/Getting_Started)
+2. Run your shell (ie. `MSYS2 64bit > MSYS2 MinGW 64 bit`), then change into your development/working directory, ie.:
+
+  ```sh
+  cd /c/Users/Development/3ds/
+  ```
+3. Install the 3dportlibs in pacman
+
+  ```sh
+  pacman -S 3ds-portlibs
+  ```
+4. Build and install latest `sf2dlib`:
+
+  ```sh
+  git clone https://github.com/vargaviktor/sf2dlib
+  cd sf2dlib/libsf2d
+  make
+  make install
+  cd ../..
+  ```
+
+8. Build and install latest `sfillib`:
+
+  ```sh
+  git clone https://github.com/xerpi/sfillib
+  cd sfillib/libsfil
+  make
+  make install
+  cd ../..
+  ```
+
+9. Build and install latest `sftdlib`:
+
+  ```sh
+  git clone https://github.com/xerpi/sftdlib
+  cd sftdlib/libsftd
+  make
+  make install
+  cd ../..
+  ```
+
+10. Build ZeldaROTH`:
+  ```sh
+  git clone https://github.com/vargaviktor/ZeldaROTH
+  cd ZeldaROTH
+  make
+  
