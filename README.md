@@ -6,7 +6,9 @@ Additional new language to play: Hungarian
 
 ## Screenshots
 ![Screenshot0](https://github.com/vargaviktor/ZeldaROTH/blob/master/zeldaroth0.png)
+
 ![Screenshot1](https://github.com/vargaviktor/ZeldaROTH/blob/master/zeldaroth1.jpg)
+
 ![Screenshot2](https://github.com/vargaviktor/ZeldaROTH/blob/master/zeldaroth2.jpg)
 
 ## Credits
