@@ -5,9 +5,9 @@ This is a port to 3ds of a great Zelda fan game, Zelda Return of the Hylian.
 Additional new language to play: Hungarian
 
 ## Screenshots
-![Screenshot0](zeldaroth0.jpg)
-![Screenshot1](zeldaroth1.jpg)
-![Screenshot2](zeldaroth2.jpg)
+![Screenshot0](https://github.com/vargaviktor/ZeldaROTH/blob/master/zeldaroth0.png)
+![Screenshot1](https://github.com/vargaviktor/ZeldaROTH/blob/master/zeldaroth1.jpg)
+![Screenshot2](https://github.com/vargaviktor/ZeldaROTH/blob/master/zeldaroth2.jpg)
 
 ## Credits
 
