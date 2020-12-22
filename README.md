@@ -4,9 +4,15 @@ Port of Zelda ROTH on 3ds
 This is a port to 3ds of a great Zelda fan game, Zelda Return of the Hylian.
 Additional new language to play: Hungarian
 
+## Screenshots
+![Screenshot0](zeldaroth0.jpg)
+![Screenshot1](zeldaroth1.jpg)
+![Screenshot2](zeldaroth2.jpg)
+
 ## Credits
 
 The original game is made by Vincent Jouillat (http://www.zeldaroth.fr)
+Original port made by NOD90
 This game uses the sf2d sftd and sfil libraries created by Xerpi.
 Hungarian translation added by vargaviktor.
 
