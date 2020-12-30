@@ -108,3 +108,6 @@ In the zip there is also a CIA version.
   makerom -f cia -o <target.cia> -rsf ./resources/<resourcefile.rsd> -target t -exefslogo -elf <stripped.elf> -icon <builded.smdh> -banner ./resources/banner.bin
   ```
  
+## Known bugs
+* graphic glitch, when loading and replacing levels on screen, maybe I implement logging to catch that.
+
