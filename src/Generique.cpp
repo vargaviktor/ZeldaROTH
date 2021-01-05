@@ -1800,7 +1800,7 @@ break;
 }
 
 	int languageID = getLanguage();
-	if (languageID<1 || languageID>5) languageID = 1;
+	if (languageID<1 || languageID>6) languageID = 1;
     
     src.h = 21; src.w = 16;src.x = 0;src.y=0;
     dst.x = 26; dst.y = 69+43*ligne;

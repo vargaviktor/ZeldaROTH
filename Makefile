@@ -35,7 +35,7 @@ ROMFS       :=  data
 
 APP_TITLE		:= Zelda ROTH
 APP_DESCRIPTION	:= Zelda - Return of the Hylian
-APP_AUTHOR		:= Ported by NOP90
+APP_AUTHOR		:= NOP90, vargaviktor
 
 #---------------------------------------------------------------------------------
 # options for code generation

@@ -1272,7 +1272,7 @@ switch (id) {
             if (tmp<4) buffer = "Még "+os.str()+" darabra van szükséged egy új szívtárolóhoz.";
             else buffer = "A szív szinted növekedett!";
             break;
-        case 11 : texte = "É: Link otthona*W: Hyrule fennsík*K: Erdõ temploma"; break;
+        case 11 : texte = "É: Link otthona*NY: Hyrule fennsík*K: Erdõ temploma"; break;
         case 12 : texte = "Hegyi templom**Nem a szívbajosak, ijedõsek és a gyenge szívûek számára."; break; 
         case 13 : texte = "NY: Sivatag bejárat*É: Hegyi templom"; break;
         case 14 : texte = "É: Hegyi templom*D: Hyrule fennsík"; break;
@@ -1910,6 +1910,10 @@ case 5: // Spanish
 	comptexte = "Has encontrado un cuarto de corazón !!!";
 break;
 
+case 6: // Hungarian
+	comptexte = "Találtál egy szívdarabot!!!";
+break;
+
 default:
 	comptexte = "You found a piece of heart!!!";
 break;	
@@ -2084,8 +2088,10 @@ void Texte::afficheLettre(SDL_Surface* gpScreen, char c, int vx, int vy) {
     if(val=='í') {src.x=164;src.y=52;}
     // á
     if(val=='á') {src.x=164;src.y=84;}
-    // á
-    if(val=='á') {src.x=164;src.y=151;}
+	
+	// not spanish was a bug
+    //// á
+    //if(val=='á') {src.x=164;src.y=151;}
     
 	// de
     // ß
@@ -2107,6 +2113,36 @@ void Texte::afficheLettre(SDL_Surface* gpScreen, char c, int vx, int vy) {
     // ò
     if(val=='ò') {src.x=164;src.y=119;}
  
+	// hu - start
+	// á - ok in spanish
+	// é - ok in french
+	// í - ok in spanish
+	// ó - ok in spanish
+	// ö - ok in german
+	// õ - nincs
+	if(val=='õ') {src.x=164;src.y=135;}
+	// ú
+	if(val=='ú') {src.x=164;src.y=151;}
+	// ü - ok in french
+	// û - ok in french
+	// -----
+	// Á	
+    if(val=='Á') {src.x=6+16*4; src.y=167;}
+	// É
+	if(val=='É') {src.x=6+16*9; src.y=167;}	
+	// Í 
+	if(val=='Í') {src.x=6+16*10; src.y=167;}	
+	// Ó	
+    if(val=='Ó') {src.x=6+16*5; src.y=167;}
+    // Ö - ok in german 
+	// Õ
+    if(val=='Õ') {src.x=6+16*7; src.y=167;}	
+	// Ú
+    if(val=='Ú') {src.x=6+16*6; src.y=167;}
+	// Ü - ok in german
+	// Û
+	if(val=='Û') {src.x=6+16*8; src.y=167;}	
+	// hu - end
 
     // /
     if(val==47) {src.x=52;src.y=151;}
@@ -2182,7 +2218,7 @@ void Texte::afficheLettre(SDL_Surface* gpScreen, char c, int vx, int vy) {
     // <
     if(val==60) {src.x=84;src.y=151;}
             
-    //chiffres            
+    //chiffres // numbers           
     if(val>=48 && val<=57) {src.x=3+16*((val-48)%5); src.y=103+16*((val-48)/5);}
     
     SDL_BlitSurface(imageFont, &src, gpScreen, &dst);
